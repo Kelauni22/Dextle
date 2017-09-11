@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<html>
+  <head>
+      <title>Contact Profile</title>
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="{% static 'css/contact_list.css' %}">
+  </head>
+  <body>
+    <!-- Navigation Bar w/ Dextle and logout button -->
+    <nav>
+      <h1>DEXTLE.</h1>
+      <button>Log Out</button>
+    </nav>
+    <button>Edit Contact</button>
+    <h2>{{contact.contact_first_name}} {{contact.contact_last_name}}</h2>
+    <p>{{contact.gender}}</p>
+    <br />
+    <p>Where: {{contact.where_met}}</p>
+    <p>When: {{contact.when_met}}</p>
+    <p>Description: {{contact.contact_desc}}</p>
+    <p>Phone: {{contact.contact_phone}}</p>
+    <p>Email: {{contact.contact_email}}</p>
+    <button>BACK</button>
+  </body>
+</html>
